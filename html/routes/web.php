@@ -14,7 +14,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "Gateway micro service";
 });
 
 /**
@@ -22,10 +22,10 @@ $router->get('/', function () use ($router) {
  */
 $router->get('/authors','AuthorController@index');
 $router->post('/authors','AuthorController@store');
-$router->get('/authors/{authors}','AuthorController@show');
-$router->put('/authors/{authors}','AuthorController@update');
-$router->patch('/authors/{authors}','AuthorController@update');
-$router->delete('/authors/{authors}','AuthorController@destroy');
+$router->get('/authors/{author}','AuthorController@show');
+$router->put('/authors/{author}','AuthorController@update');
+$router->patch('/authors/{author}','AuthorController@update');
+$router->delete('/authors/{author}','AuthorController@destroy');
 
 
 /**
